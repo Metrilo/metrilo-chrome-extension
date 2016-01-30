@@ -30,10 +30,10 @@ function onSessionModeChange() {
   var sessionModeOn = $('#session_track_switcher').prop('checked');
 
   if (!sessionModeOn) {
-    // chrome.storage.sync.remove('mp_session_events');
-    chrome.storage.sync.set({ 'mp_session_mode_on': false }, function(storageSize) {});
+    // chrome.storage.local.remove('mp_session_events');
+    chrome.storage.local.set({ 'mp_session_mode_on': false }, function(storageSize) {});
   } else {
-    chrome.storage.sync.set({ 'mp_session_mode_on': true }, function(storageSize) {});
+    chrome.storage.local.set({ 'mp_session_mode_on': true }, function(storageSize) {});
   }
 }
 
@@ -43,7 +43,7 @@ window.addEventListener('load', function(evt) {
       eventPage.getPageDetails(onPageDetailsReceived);
       $('#session_track_switcher').change(onSessionModeChange);
 
-      chrome.storage.sync.get({ 'mp_session_mode_on': false }, function (cache) {
+      chrome.storage.local.get({ 'mp_session_mode_on': false }, function (cache) {
         $('#session_track_switcher').prop('checked', cache.mp_session_mode_on);
       });
 
