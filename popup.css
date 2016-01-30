@@ -1,0 +1,99 @@
+body {
+  font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
+  font-size: 100%;
+}
+
+#met-holder-table {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+#met-holder-table td, #met-holder-table th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#met-holder-table tr:nth-child(even){background-color: #f2f2f2}
+
+#met-holder-table tr:hover {background-color: #ddd;}
+
+#met-holder-table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: #368ee0;
+    color: white;
+}
+
+#metrilo-status {
+  /* avoid an excessively wide status text */
+  width: 700px;
+  height: 40px;
+}
+
+#metrilo-logo {
+  background-image: url('icon.png');
+  width: 50px;
+  height: 50px;
+  float: left;
+  display: block;
+  position: relative;
+  background-size: 100% 100%;
+  top: -5px;
+}
+
+#metrilo-header {
+  font-size: 22px;
+  padding-top: 5px;
+}
+
+.onoffswitch {
+    position: relative; width: 182px;
+    float: right;
+    bottom: 25px;
+    -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+}
+.onoffswitch-checkbox {
+    display: none;
+}
+.onoffswitch-label {
+    display: block; overflow: hidden; cursor: pointer;
+    border: 2px solid #999999; border-radius: 16px;
+}
+.onoffswitch-inner {
+    display: block; width: 200%; margin-left: -100%;
+    transition: margin 0.3s ease-in 0s;
+}
+.onoffswitch-inner:before, .onoffswitch-inner:after {
+    display: block; float: left; width: 50%; height: 30px; padding: 0; line-height: 30px;
+    font-size: 15px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+    box-sizing: border-box;
+}
+.onoffswitch-inner:before {
+    content: "Enable History";
+    padding-left: 11px;
+    background-color: #26bf48;
+    color: black;
+}
+.onoffswitch-inner:after {
+    content: "Disable History";
+    padding-right: 11px;
+    background-color: #cb441c;
+    color: black;
+    text-align: right;
+}
+.onoffswitch-switch {
+    display: block; width: 17px; margin: 8px;
+    background: #FFFFFF;
+    position: absolute; top: 0; bottom: 0;
+    right: 145px;
+    border: 2px solid #999999; border-radius: 16px;
+    transition: all 0.3s ease-in 0s;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+    margin-left: 0;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+    right: 0px;
+}

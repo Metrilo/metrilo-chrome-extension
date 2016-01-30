@@ -1,0 +1,46 @@
+<!doctype html>
+<!--
+ This page is shown when the extension button is clicked, because the
+ "browser_action" field in manifest.json contains the "default_popup" key with
+ value "popup.html".
+ -->
+<html>
+  <head>
+    <title>Getting Started Extension's Popup</title>
+    <link rel="stylesheet" type="text/css" href="popup.css">
+
+    <!--
+      - JavaScript and HTML must be in separate files: see our Content Security
+      - Policy documentation[1] for details and explanation.
+      -
+      - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
+     -->
+    <script src="jquery.min.js"></script>
+    <script src="popup.js"></script>
+  </head>
+  <body>
+    <div id="metrilo-status">
+      <div id="metrilo-logo"></div>
+      <div id="metrilo-header">
+        Metrilo Tracked Events
+      </div>
+
+      <div class="onoffswitch">
+          <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="session_track_switcher">
+          <label class="onoffswitch-label" for="session_track_switcher">
+              <span class="onoffswitch-inner"></span>
+              <span class="onoffswitch-switch"></span>
+          </label>
+      </div>
+    </div>
+
+    <div id="met-plugin-holder">
+      <table id="met-holder-table">
+        <tr>
+          <th>API Method</th>
+          <th>Ordered Params</th>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>
