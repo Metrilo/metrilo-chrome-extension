@@ -4,7 +4,6 @@ function getPageDetails(callback) {
 
   chrome.runtime.onMessage.addListener(function(message)  {
     chrome.storage.sync.get({ 'mp_session_mode_on': false, 'mp_session_events': [] }, function(cached) {
-      console.log(cached.mp_session_mode_on);
       if (cached.mp_session_mode_on) {
           var currentEvents = message.metrilo_events.concat(cached.mp_session_events);
 

@@ -71,13 +71,13 @@ body {
     box-sizing: border-box;
 }
 .onoffswitch-inner:before {
-    content: "Enable History";
+    content: "History On";
     padding-left: 11px;
     background-color: #26bf48;
     color: black;
 }
 .onoffswitch-inner:after {
-    content: "Disable History";
+    content: "History Off";
     padding-right: 11px;
     background-color: #cb441c;
     color: black;

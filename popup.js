@@ -1,5 +1,4 @@
 function onPageDetailsReceived(metrilo_events)  {
-  console.log(metrilo_events.length);
     var eventRows = '';
 
     for (i = 0; i < metrilo_events.length; i++) {
