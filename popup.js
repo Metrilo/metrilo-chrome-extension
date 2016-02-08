@@ -30,7 +30,7 @@ function onSessionModeChange() {
   var sessionModeOn = $('#session_track_switcher').prop('checked');
 
   if (!sessionModeOn) {
-    // chrome.storage.local.remove('mp_session_events');
+    chrome.storage.local.remove('mp_session_events');
     chrome.storage.local.set({ 'mp_session_mode_on': false }, function(storageSize) {});
   } else {
     chrome.storage.local.set({ 'mp_session_mode_on': true }, function(storageSize) {});
