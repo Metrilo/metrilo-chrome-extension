@@ -4,22 +4,23 @@ function onPageDetailsReceived(metrilo_events)  {
     for (i = 0; i < metrilo_events.length; i++) {
         var metrilo_event = metrilo_events[i];
 
-        eventRows += '<tr>'
-        eventRows += '<td>' + metrilo_event.method + '</td>'
-        eventRows += '<td>'
+        eventRows += '<tr>';
+        eventRows += '<td>' + metrilo_event.method + '</td>';
+        eventRows += '<td>';
         eventRows += '<ol>';
 
         for (j = 0; j < metrilo_event.params.length; j++) {
-            var parsedParam = undefined;
+            var parsedParam;
+
             if (metrilo_event.params[j]) {
                 parsedParam = JSON.stringify(metrilo_event.params[j], null, 4);
             }
 
             eventRows += '<li>' + parsedParam + '</li>';
         }
-        eventRows += '</ol>'
-        eventRows += '</td>'
-        eventRows += '</tr>'
+        eventRows += '</ol>';
+        eventRows += '</td>';
+        eventRows += '</tr>';
     }
 
     $('#met-holder-table').append(eventRows);
